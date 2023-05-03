@@ -2,7 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const bcrypt = require('bcrypt');
-const PORT = process.env.PORT || 3000;
+const port = process.env.PORT || "8080";
 
 // knex db //
 const db = require('knex')({
@@ -60,6 +60,6 @@ app.get('/profile/:id', (req, res) => {
 })
 
 // start server //
-app.listen(PORT, () => {
+app.listen(port, () => {
     console.log(`App is running on port ${PORT}`);
 })

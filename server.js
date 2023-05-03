@@ -30,6 +30,8 @@ app.use(cors());
 
 // routes //
 
+app.get('/', (req, res) => { res.send('Face Detector 3000 server is running') });
+
 app.post('/signin', async (req, res) => {
     signIn.signIn(req, res, db, bcrypt)
 })

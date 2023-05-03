@@ -61,5 +61,5 @@ app.get('/profile/:id', (req, res) => {
 
 // start server //
 app.listen(port, () => {
-    console.log(`App is running on port ${PORT}`);
+    console.log(`App is running on port ${port}`);
 })

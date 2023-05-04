@@ -1,6 +1,6 @@
 // Clarifai config //
 
-const PAT = '9da2e418cb9d4cda86dae00ec73d79ae';
+const PAT = process.env.CLARIFAI_PAT;
 const USER_ID = 'hellmanlouis';
 const APP_ID = 'face-detector-3000';
 

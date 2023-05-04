@@ -22,11 +22,11 @@ const db = require('knex')({
     searchPath: ['public']
 });
 
-console.log("Database configuration:", db.client.config);
-db.raw('SELECT current_database(), current_schema()')
-    .then((result) => {
-        console.log("Current database and schema:", result.rows[0]);
-    });
+// console.log("Database configuration:", db.client.config);
+// db.raw('SELECT current_database(), current_schema()')
+//     .then((result) => {
+//         console.log("Current database and schema:", result.rows[0]);
+//     });
 
 // controllers //
 const signIn = require('./controllers/signIn.js')

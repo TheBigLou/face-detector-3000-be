@@ -5,7 +5,7 @@ const hashPassword = async (bcrypt, password, saltRounds) => {
 }
 
 const emailExists = async (db, email) => {
-    const data = await db('public.users').where({email: email});
+    const data = await db('users').where({email: email});
     return data.length >0;
 }
 
@@ -35,7 +35,7 @@ const registerUser = async (req, res, db, bcrypt) => {
             .into('login')
             .returning('email')
             .then(loginEmail => {
-                return db('public.users')
+                return db('users')
                 .returning('*')
                 .insert({
                     name: name,

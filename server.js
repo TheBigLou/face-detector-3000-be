@@ -8,7 +8,6 @@ const port = process.env.PORT || "8080";
 const db = require('knex')({
     client: 'pg',
     connection: {
-        host: 'face-detector-3000-be-db.internal',
         connectionString : process.env.DATABASE_URL,
         port : 5432,
         user : 'postgres',

@@ -52,7 +52,7 @@ const registerUser = async (req, res, db, bcrypt) => {
         })
     } catch (err) {
         console.log(err);
-        res.status(400).json({regFail: true, message: 'Error occured during registration'});
+        res.status(400).json({regFail: true, message: 'Error occured during registration', error: err});
     }
 }
 

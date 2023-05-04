@@ -5,10 +5,21 @@ const bcrypt = require('bcrypt');
 const port = process.env.PORT || "8080";
 
 // knex db //
+// const db = require('knex')({
+//     client: 'pg',
+//     connection: {
+//       host : '127.0.0.1',
+//       port : 5432,
+//       user : 'louishellman',
+//       password : '',
+//       database : 'face-detector-3000'
+//     }
+// });
+
 const db = require('knex')({
     client: 'pg',
     connection: {
-        connectionString : process.env.DATABASE_URL,
+      connectionString : process.env.DATABASE_URL || 'postgres://postgres:VZjsNNsNCGMuLfB@face-detector-3000-be-db.flycast:5432'
     }
 });
 

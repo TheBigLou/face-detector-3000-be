@@ -1,0 +1,16 @@
+# fly.toml app configuration file generated for face-detector-3000-be on 2023-05-03T20:46:18-07:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = "face-detector-3000-be"
+primary_region = "lax"
+
+[env]
+  PORT = "8080"
+
+[http_service]
+  internal_port = 8080
+  force_https = true
+  auto_stop_machines = true
+  auto_start_machines = true
